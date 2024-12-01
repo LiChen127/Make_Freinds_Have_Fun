@@ -1,0 +1,25 @@
+# POST http://127.0.0.1:5000/api/create_friend HTTP/1.1
+# Content-Type: application/json
+
+# {
+#   "name": "test",
+#   "role": "leader",
+#   "description": "test",
+#   "gender": "female"
+# }
+
+# GET http://127.0.0.1:5000/api/get_all_friends HTTP/1.1
+
+
+# DELETE http://127.0.0.1:5000/api/delete_friend/1 HTTP/1.1
+# Content-Type: application/json
+
+PUT  http://127.0.0.1:5000/api/update_friend/2 HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "test",
+  "role": "hello",
+  "description": "A CMS By UPDATE",
+  "gender": "female"
+}

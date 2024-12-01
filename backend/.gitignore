@@ -1,0 +1,13 @@
+.vscode/
+.idea/
+*.iml
+*.pyc
+
+.env
+
+friends.db
+
+*.pyc
+
+node_modules/
+/dist/
