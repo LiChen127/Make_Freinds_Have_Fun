@@ -1,3 +1,12 @@
+venv/
+venv*/
+.Python
+bin/
+lib/
+lib54/
+include/
+pip-selfcheck.json
+
 .vscode/
 .idea/
 *.iml
