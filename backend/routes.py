@@ -71,21 +71,6 @@ def update_friend(id):
     friend.role = data.get('role', friend.role)
     friend.description = data.get('description', friend.description)
 
-    new_gender = data.get('gender')
-    new_img_url = friend.img_url
-    if(new_gender != friend.gender):
-      if new_gender == 'male':
-        new_img_url = f"https://avatar.iran.liara.run/public/boy?username={data.get('name', friend.name)}"
-        friend.img_url = new_img_url
-      elif new_gender == 'female':
-        new_img_url = f"https://avatar.iran.liara.run/public/girl?username={data.get('name', friend.name)}"
-        friend.img_url = new_img_url
-      else:
-        new_img_url = None
-        friend.img_url = new_img_url
-    
-    friend.gender = data.get('gender', new_gender)
-
     db.session.commit()
     return jsonify({"data": friend.to_json()}), 200
   except Exception as e:
